@@ -1,0 +1,106 @@
+
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+html,body{
+  background: hsl(218, 23%, 16%);
+  /* background:hsl(217, 19%, 38%) ; */
+}
+main , .dice, .advice-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: space-evenly;
+  width: 600px;
+  height: fit-content ;
+  background : hsl(217, 19%, 24%) ;
+  box-shadow: 0 20px 20px 10px rgba(0, 0, 0, 0.19);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  position: relative;
+}
+.head-text{
+  width: 100%;
+  height: 30px;
+  padding: 10px;
+  font-size: 1.5em;
+  letter-spacing: 5px;
+  color: hsl(150, 100%, 66%);
+  text-transform: uppercase;
+}
+.adviceId{
+  letter-spacing: normal;
+}
+.text-content-container{
+  position: relative;
+  padding-bottom: 50px;
+}
+.advice-text{
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  padding: 20px 40px;
+  font-size: 2em;
+  color: hsl(193, 38%, 86%);
+  margin-top: 20px;
+  line-height: 40px;
+}
+.divider, .dice{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 20px;
+  z-index: 1000;
+}
+.dice{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: hsl(150, 100%, 66%);
+  bottom: -35px;
+  cursor: pointer;
+  z-index: 100;
+   &:hover{
+     box-shadow:
+     0 0px 15px 3px hsl(150, 100%, 66%) ; 
+   }
+}
+.mobile{
+  display: none;
+}
+.attribution {
+  font-size: 11px; 
+  text-align: center;
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 600px){
+  .container{
+    width: 80%;
+  }
+  .desktop{
+    display: none;
+  }
+  .mobile{
+    display: block;
+  }
+  .advice-text{
+    font-size: 1.5em;
+  }
+  .head-text{
+    font-size: 1em;
+  }
+}
