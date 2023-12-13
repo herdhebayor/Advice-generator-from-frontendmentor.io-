@@ -5,12 +5,20 @@ const adviceId= document.getElementById('adviceId')
 
 
 
-btn.addEventListener('click', ()=>{
+
+let genrateAdvice = ()=>{
+  output.classList.remove("fade")
 fetch("https://api.adviceslip.com/advice")
 .then(data=>{
   return data.json()})
 .then(item => {
 output.innerHTML  = `${item.slip.advice}`
 adviceId.innerHTML =`# ${item.slip.id}`
+output.classList.add("fade")
 })
+.catch(err=>{
+  output.innerHTML = "unidentify error try again:", err;
 })
+
+}
+btn.addEventListener('click',genrateAdvice)

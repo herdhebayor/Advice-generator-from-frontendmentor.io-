@@ -4,6 +4,7 @@
 *{
   box-sizing: border-box;
   margin: 0;
+  pointer-events: auto;
 }
 html,body{
   background: hsl(218, 23%, 16%);
@@ -24,8 +25,9 @@ main , .dice, .advice-text{
   height: fit-content ;
   background : hsl(217, 19%, 24%) ;
   box-shadow: 0 20px 20px 10px rgba(0, 0, 0, 0.19);
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 40px;
+  padding-bottom: 50px;
   text-align: center;
   position: relative;
 }
@@ -49,11 +51,12 @@ main , .dice, .advice-text{
   width: 100%;
   height: fit-content;
   position: relative;
-  padding: 20px 40px;
+  padding: 20px 50px;
   font-size: 2em;
   color: hsl(193, 38%, 86%);
   margin-top: 20px;
   line-height: 40px;
+  opacity: 0;
 }
 .divider, .dice{
   position: absolute;
@@ -86,6 +89,11 @@ main , .dice, .advice-text{
 .attribution a { 
   color: hsl(228, 45%, 44%); 
 }
+.fade{
+  opacity: 1;
+  transition: opacity 1.5s;
+}
+
 
 @media screen and (max-width: 600px){
   .container{
