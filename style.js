@@ -1,4 +1,3 @@
-
 const output = document.getElementById("advice-text");
 const btn = document.getElementById("dice")
 const adviceId= document.getElementById('adviceId')
@@ -18,6 +17,7 @@ output.classList.add("fade")
 })
 .catch(err=>{
   output.innerHTML = "unidentify error try again:", err;
+  output.classList.add("fade")
 })
 
 }
