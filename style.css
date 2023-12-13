@@ -1,5 +1,5 @@
 
-
+  @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;500&family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,800;1,9..144,300&family=Manrope:wght@500&family=Montserrat:wght@500&family=Space+Mono&family=Ubuntu&display=swap');
 
 *{
   box-sizing: border-box;
@@ -9,6 +9,7 @@
 html,body{
   background: hsl(218, 23%, 16%);
   /* background:hsl(217, 19%, 38%) ; */
+  font-family: 'Barlow', sans-serif;
 }
 main , .dice, .advice-text{
   display: flex;
